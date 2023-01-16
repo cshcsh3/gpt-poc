@@ -24,6 +24,8 @@ with open('videos.csv', 'r') as videos:
 
       yt_info.generate(url)
       response = query_gpt(topic)
+      
+      # TODO Write to a csv file
       f.write(f'{url} - Topic: {topic}, Manual rating: {video_row[4]}, GPT rating: {response}\n')
 
     line_count += 1
